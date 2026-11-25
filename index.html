@@ -1,0 +1,2833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airbnb Clone - Header</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="logo">
+        <span class="logo-icon">⌂</span>
+        <span class="logo-text">airbnb</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">🏠</span>
+          <span>Homes</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🛎️</span>
+          <span>Hotels</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🎈</span>
+          <span>Experiences</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🛎️</span>
+          <span>Services</span>
+        </a>
+      </nav>
+
+      <div class="right-actions">
+        <a href="#" class="become-host">Become a host</a>
+        <button class="icon-btn">🌐</button>
+        <button class="menu-btn">☰</button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <div class="search-bar">
+        <div class="search-field">
+          <label>Where</label>
+          <span>Search destinations</span>
+        </div>
+        <div class="divider"></div>
+        <div class="search-field">
+          <label>Check in</label>
+          <span>Add dates</span>
+        </div>
+        <div class="divider"></div>
+        <div class="search-field">
+          <label>Check out</label>
+          <span>Add dates</span>
+        </div>
+        <div class="divider"></div>
+        <div class="search-field last">
+          <div>
+            <label>Who</label>
+            <span>Add guests</span>
+          </div>
+          <button class="search-btn">🔍</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Title -->
+  <main class="content">
+    <h2>Available in Ikeja this weekend <span>›</span></h2>
+  </main>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+}
+
+.header {
+  padding: 16px 40px 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #FF385C;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+/* Nav */
+.main-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #6a6a6a;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.nav-item.active {
+  color: #222;
+  border-bottom: 2px solid #222;
+  border-radius: 0;
+  padding-bottom: 8px;
+}
+
+.nav-item:hover {
+  background: #f7f7f7;
+}
+
+.nav-item.active:hover {
+  background: transparent;
+}
+
+/* Right Actions */
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.become-host {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.become-host:hover {
+  background: #f7f7f7;
+}
+
+.icon-btn, .menu-btn {
+  border: none;
+  background: #f7f7f7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Search Bar */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 850px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.search-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.search-field:hover {
+  background: #f7f7f7;
+}
+
+.search-field label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.search-field span {
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.search-field.last {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-field.last > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background: #ddd;
+}
+
+.search-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #FF385C;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Content */
+.content {
+  max-width: 1280px;
+  margin: 32px auto;
+  padding: 0 40px;
+}
+
+.content h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.content h2 span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 16px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .become-host {
+    display: none;
+  }
+  .search-bar {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+  .divider {
+    width: 90%;
+    height: 1px;
+  }
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available in Ikeja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 7 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="c:\Users\USER\Downloads\ab7.avifw=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="c:\Users\USER\Downloads\ab8.avifw=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 9 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="c:\Users\USER\Downloads\ab9.avifw=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 10 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="c:\Users\USER\Downloads\ab10.avifw=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 11 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 12 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 13 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 14 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 15 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 16 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 17 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 18 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 19 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 20 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 21 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 22 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 23 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 24 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 25 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 26 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 27 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 28 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 29 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 30 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 31 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 32 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 33 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 34 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 35 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 36 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 37 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 38 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 39 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 40 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 41 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 42-->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 43 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 44 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 45 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 46 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 47 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 48 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 49 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 50 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 51 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 52 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 53 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 54 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 55 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 56 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 57 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 58 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 59 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 60 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 61 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 62 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 63 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 64 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 65 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 66 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header">
+      <h2>Available in Ikeja this weekend <span class="arrow">→</span></h2>
+      <div class="controls">
+        <button class="control-btn">&lt;</button>
+        <button class="control-btn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="scroll-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600" alt="Home in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Lagos</h3>
+          <p class="rating">★ 4.91 <span>(1,214)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600" alt="Home in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Home in Ikeja</h3>
+          <p class="rating">★ 4.91 <span>(412)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.88 <span>(230)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Room in Ikeja">
+          <span class="badge">Guest favourite</span>
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Room in Ikeja</h3>
+          <p class="rating">★ 4.95 <span>(180)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.87 <span>(95)</span></p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Apartment in Lagos">
+          <button class="heart">♡</button>
+        </div>
+        <div class="card-info">
+          <h3>Apartment in Lagos</h3>
+          <p class="rating">★ 4.90 <span>(310)</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  padding: 24px;
+}
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.arrow {
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  color: #222;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 calc(16.666% - 14px);
+  min-width: 180px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #222;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.card-info {
+  padding-top: 10px;
+}
+
+.card-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.rating {
+  font-size: 13px;
+  color: #222;
+}
+
+.rating span {
+  color: #717171;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 calc(33.333% - 11px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .controls {
+    display: none;
+  }
+}
+</style>
+</body>
+</html>
+</body>
+</html>
